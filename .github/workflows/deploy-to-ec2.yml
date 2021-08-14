@@ -20,4 +20,4 @@ jobs:
           docker rm myApp
           cd program
           docker build -t anggunpermatata/my-app-v1:latest .
-          docker run -d -e "HTTP_PORT=:80" -p 80:80 --name myApp anggunpermatata/my-app-v1:latest
+          docker run -d -e "HTTP_PORT=:80" -e "CONNECTION_STRING=root:12345@tcp(3.16.131.221:3306)/alta_db?charset=utf8mb4&parseTime=True&loc=Local" -p 80:80 --name myApp anggunpermatata/my-app-v1:latest
