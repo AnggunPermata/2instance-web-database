@@ -61,6 +61,7 @@ func getUser(c echo.Context) error {
 	return c.JSON(http.StatusOK, users)
 }
 
+//
 func getOneUser(c echo.Context) error {
 	userName := c.Param("user")
 	var users User
