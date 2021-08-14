@@ -23,5 +23,5 @@ jobs:
           docker stop myApp
           docker rm myApp
           cd program
-          docker build -t my-app:latest .
-          docker run -d -e "HTTP_PORT=:80" -p 80:80 --name myApp my-app:latest
+          docker build -t anggunpermatata/my-app-v1:latest .
+          docker run -d -e "HTTP_PORT=:80" -p 80:80 --name myApp anggunpermatata/my-app-v1:latest
