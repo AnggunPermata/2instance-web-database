@@ -31,7 +31,7 @@ func main() {
 	}
 	e := echo.New()
 	e.GET("/", hello)
-	e.GET("/:user", getOneUser)
+	//e.GET("/:user", getOneUser)
 	e.GET("/allUser", getUser)
 	e.POST("/post", postName)
 	if err := e.Start(port); err != nil {
@@ -61,7 +61,7 @@ func getUser(c echo.Context) error {
 	return c.JSON(http.StatusOK, users)
 }
 
-//
+/*
 func getOneUser(c echo.Context) error {
 	userName := c.Param("user")
 	var users User
@@ -71,3 +71,4 @@ func getOneUser(c echo.Context) error {
 	}
 	return c.JSON(http.StatusOK, users)
 }
+*/
